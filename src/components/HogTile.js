@@ -10,7 +10,7 @@ function click() {
     }
 
     return (
-        <div className="pigTile" onClick={click} >
+        <div className="pigTile" onClick={click}>
             <li>{name}</li>
             <img src={image} alt={name} className="minPigTile"></img>
             {isTileInfo ? <HogTileInfo specialty={specialty} greased={greased} weight={weight} medal={medal}/> : null}

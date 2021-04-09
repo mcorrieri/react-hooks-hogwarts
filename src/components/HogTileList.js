@@ -3,22 +3,22 @@ import Sort from "./Sort";
 import Filter from "./Filter";
 import React, { useState } from "react";
 
-function HogTileList({ hogInfo }) {
+function HogTileList({hogInfo}) {
   const [isSelectedCat, setIsSelectedCat] = useState("All");
-
+    console.log(isSelectedCat)
   function onCategoryChange(isSelectedCat) {
     setIsSelectedCat(isSelectedCat);
   }
   const hogsToDisplay = hogInfo.filter((hog) => {
-    console.log(hog.greased);
     if (isSelectedCat === "All") return true;
-
-    return hog.greased === isSelectedCat;
+    if (isSelectedCat === "true") return hog.greased
+    if (isSelectedCat === "false") return !hog.greased
   });
 
   return (
     <div>
-      <Filter onCategoryChange={onCategoryChange} />
+      <Filter 
+      onCategoryChange={onCategoryChange} />
       <Sort />
       <ul>
         {hogsToDisplay.map((hog) => (
