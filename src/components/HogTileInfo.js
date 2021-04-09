@@ -3,7 +3,7 @@ function HogTileInfo({specialty, greased, weight, medal}) {
         <div>
         <ul>
             <li>Specialty: {specialty}</li>
-            <li>Greased: {greased ? "Yes" : "No"}</li>
+            <li>Greased: {greased ? "Heck Yes" : "Oh hell Naw"}</li>
             <li>Weight: {weight}</li>
             <li>Highest Medal Achieved: {medal}</li>
         </ul>
